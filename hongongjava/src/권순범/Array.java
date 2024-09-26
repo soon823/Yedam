@@ -56,10 +56,27 @@ public class Array {
 			
 		//4.학생 별 평균 계산하기
 		
-		System.out.println();
-		System.out.println();
+		
 		
 		//5.카드를 랜덤하게 선택하여 화면에 출력
+		
+//		String[] shape = {"Clubs","Diamonds","Hearts","Spades"};
+//		String[] nums = {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"};
+//		for(int i=0; i<shape.length; i++) {
+//			for(int j=0; j<nums.length; j++) {
+//				int sh = (int)(Math.random()*4);
+//				int n = (int)(Math.random()*13);			
+//				System.out.printf("%s의%s\n",shape[sh],nums[n]);
+//			}
+//		}
+		
+		String[] shape = {"Clubs","Diamonds","Hearts","Spades"};
+		String[] nums = {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"};
+		for(int i=0; i<5; i++) {
+			int sh = (int)(Math.random()*4);
+			int n = (int)(Math.random()*13);			
+			System.out.printf("%s의%s\n",shape[sh],nums[n]);		
+		}
 		
 		//6.2차원 배열 만들기
 		
