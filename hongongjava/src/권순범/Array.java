@@ -57,6 +57,7 @@ public class Array {
 		//4.학생 별 평균 계산하기
 		
 		System.out.println();
+		System.out.println();
 		
 		//5.카드를 랜덤하게 선택하여 화면에 출력
 		
