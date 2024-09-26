@@ -139,7 +139,24 @@ public class Doself {
 		//7.3, 6, 9게임 프로그램 
 		//• 1~50까지 3, 6, 9가 들어가는 숫자마다 3, 6, 9가 들어가 있는 개수 만큼 ♥출력하는 프로그램 작성 
 		
-		
+		String temp1 = "";
+		for(int i=1; i<=50; i++) {
+			if(i%10==3 || i%10==6 || i%10==9) {
+				temp1 += "♥";
+			}
+			if(i/10==3 || i/10==6 || i/10==9) {
+				temp1 += "♥";
+			}
+			if(temp1.equals("")) {
+				temp1 = String.valueOf(i);
+			}
+			if(i%10!=0) {
+				System.out.print(temp1+"\t");
+			}else {				
+				System.out.print(temp1+"\n");
+			}
+			temp1 = "";
+		}
 		
 		//크롬에 백준 검색후 사이트 가서 문제 풀어보기(쉬운문제 부터 어려운문제까지 다양함)
 	}//end main

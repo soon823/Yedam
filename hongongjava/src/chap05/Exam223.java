@@ -49,7 +49,7 @@ public class Exam223 {
 			default : System.out.println("숫자를 다시 입력해주세요");
 			}
 		}System.out.println("프로그램 종료");
-		System.out.println("프로그램 종료");
+		
 	}
 
 }
