@@ -54,7 +54,22 @@ public class Array {
 
 		// 4.학생 별 평균 계산하기
 		
-		
+		int[][] susu = new int [3][5];
+		int[] avg = new int[3];
+		for(int i = 0; i < susu.length; i++) {
+			int sum1 = 0;
+			for(int j = 0; j < susu[i].length; j++) {
+				int ran = (int)(Math.random() * 51) + 50;
+				susu[i][j] = ran;
+				System.out.print(susu[i][j] + " ");
+				sum1 += susu[i][j];
+			}
+		    avg[i] = sum1 / 5;
+			System.out.println();
+		}
+		for(int i = 0; i < avg.length; i++) {
+			System.out.printf("%d 번 학생 평균 : %d \n", i+1 , avg[i]);
+		}
 
 		// 5.카드를 랜덤하게 선택하여 화면에 출력
 
@@ -95,6 +110,8 @@ public class Array {
 			}System.out.println();
 			
 		}
+		
+		
 		
 		
 	}// end main
