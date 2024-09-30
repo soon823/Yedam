@@ -17,4 +17,7 @@ public class Computer extends Calculator{
 		}
 	}
 	
+	//ctrl + spacbar를 누르면 상속받은 메소드를 다 볼수있다
+
+	
 }
