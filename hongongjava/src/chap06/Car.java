@@ -5,20 +5,35 @@ public class Car {
 	String company = "현대자동차";
 	String model = "그랜져";
 	String color = "검정";
-	int maxSpeed = 350;
-	int speed;	//값을 지정해주지 않으면 초기화 값이 들어가짐	
-	int gas;
+	private int maxSpeed = 350;
+	private int speed;	//값을 지정해주지 않으면 초기화 값이 들어가짐	
+	private int gas;
+	private boolean stop;
+	
+	
 	//생성자 - 생성자를 만들지 않으면 컴퓨터가 자동생성함
 	
 	//메소드
-	void setGas(int gas) {
-		this.gas = gas;
-	}
+//	void setGas(int gas) {
+//		this.gas = gas;
+//	}
+//	
+//	int getSpeed() {
+//		return speed;
+//	}
 	
-	int getSpeed() {
-		return speed;
-	}
 	
+	
+	
+	public boolean isStop() {
+		return stop;
+	}
+
+	public void setStop(boolean stop) {
+		this.stop = stop;
+		this.speed = 0;
+	}
+
 	boolean isLeftGas() {
 		if(gas == 0) {
 			System.out.println("gas가 없습니다");
@@ -28,6 +43,34 @@ public class Car {
 		return true;
 	}
 	
+	public int getMaxSpeed() {
+		return maxSpeed;
+	}
+
+	public void setMaxSpeed(int maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		if(speed < 0) {
+			this.speed = 0;
+			return;
+		}
+		this.speed = speed;
+	}
+
+	public int getGas() {
+		return gas;
+	}
+
+	public void setGas(int gas) {
+		this.gas = gas;
+	}
+
 	void run() {
 		while(true) {
 			if(gas > 0) {
