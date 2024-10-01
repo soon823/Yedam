@@ -8,7 +8,7 @@ public class Account {
 	static final int MIN_BALANCE = 0;
 	static final int MAX_BALANCE = 1000000;
 	//생성자
-	Account(int balance, String ano, String owner){
+	Account(String ano, String owner,int balance){
 		this.balance = balance;
 		this.ano = ano;
 		this.owner= owner;

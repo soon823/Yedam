@@ -8,9 +8,9 @@ public class AccountMain {
 		
 		Scanner sc = new Scanner(System.in);	
 		
-		Account[] list = null; 
+		Account[] list = new Account[100]; 
 		
-		int count = 0;
+		Account ac = null;
 		
 		boolean run = true;
 		
@@ -37,13 +37,16 @@ public class AccountMain {
 					System.out.print("초기입금액 : ");
 					int balance = Integer.parseInt(sc.nextLine());
 					
+					ac = new Account(ano,owner,balance);
 					
+					for(int i=0; i<list.length; i++) {
+						if(list[i] == null) {
+							list[i] = ac;
+							break;
+						}
+					}
 					
-					//list[] = new Account(ano,owner,balance);
-					
-					System.out.println("결과: 계좌가 생성되었습니다");
-					
-					
+					System.out.println("결과: 계좌가 생성되었습니다");					
 					break;
 					
 			case 2 :System.out.println("----------");
@@ -52,15 +55,23 @@ public class AccountMain {
 					
 					
 						
-					System.out.print("계좌번호 : ");
+//					System.out.print("계좌번호 : " + ac.getAno());
+//						
+//					System.out.print("계좌주 : " + ac.getOwner());
+//						
+//					System.out.println("초기입금액 : " + ac.getBalance());
 						
-					System.out.print("계좌주 : ");
-						
-					System.out.println("초기입금액 : ");
-						
-					
-					
+					if(list[0]==null) {
+						System.out.println("조회할수있는 계좌가 없습니다.");
+						break;
+					}
+					for(Account pr:list) {
+						if(pr != null) {
+							System.out.printf("%s %s %d\n",pr.getAno(),pr.getOwner(),pr.getBalance());
+						}
+					}
 					break;
+					
 					
 			case 3 :System.out.println("----------");
 					System.out.println("예금");
