@@ -158,6 +158,8 @@ public class Doself {
 			temp1 = "";
 		}
 		
+		sc.close();
+		
 		//크롬에 백준 검색후 사이트 가서 문제 풀어보기(쉬운문제 부터 어려운문제까지 다양함)
 	}//end main
 
