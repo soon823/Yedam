@@ -77,6 +77,12 @@ public class AccountMain {
 					System.out.println("예금");
 					System.out.println("----------");
 					
+//					System.out.print("계좌번호 : ");
+//					ac.setAno(sc.nextLine());
+//					
+//					System.out.print("예금액 : ");
+//					ac.setBalance(Integer.parseInt(sc.nextLine()));
+					
 					System.out.println("결과: 예금이 성공되었습니다");
 					break;
 					
